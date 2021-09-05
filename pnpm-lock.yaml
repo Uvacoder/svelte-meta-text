@@ -5,6 +5,7 @@ specifiers:
   svelte: ^3.34.0
   svelte-check: ^2.0.0
   svelte-preprocess: ^4.0.0
+  svelte2tsx: ^0.4.5
   tslib: ^2.0.0
   typescript: ^4.0.0
 
@@ -13,6 +14,7 @@ devDependencies:
   svelte: 3.42.4
   svelte-check: 2.2.5_svelte@3.42.4
   svelte-preprocess: 4.9.0_svelte@3.42.4+typescript@4.4.2
+  svelte2tsx: 0.4.5_svelte@3.42.4+typescript@4.4.2
   tslib: 2.3.1
   typescript: 4.4.2
 
@@ -186,6 +188,10 @@ packages:
       ms: 2.1.2
     dev: true
 
+  /dedent-js/1.0.1:
+    resolution: {integrity: sha1-vuX7fJ5yfYXf+iRZDRDsGrElUwU=}
+    dev: true
+
   /detect-indent/6.1.0:
     resolution: {integrity: sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==}
     engines: {node: '>=8'}
@@ -316,6 +322,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /lower-case/2.0.2:
+    resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
+    dependencies:
+      tslib: 2.3.1
+    dev: true
+
   /magic-string/0.25.7:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
     dependencies:
@@ -359,6 +371,13 @@ packages:
     hasBin: true
     dev: true
 
+  /no-case/3.0.4:
+    resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
+    dependencies:
+      lower-case: 2.0.2
+      tslib: 2.3.1
+    dev: true
+
   /normalize-path/3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
@@ -375,6 +394,13 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       callsites: 3.1.0
+    dev: true
+
+  /pascal-case/3.1.2:
+    resolution: {integrity: sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==}
+    dependencies:
+      no-case: 3.0.4
+      tslib: 2.3.1
     dev: true
 
   /path-is-absolute/1.0.1:
@@ -583,6 +609,18 @@ packages:
   /svelte/3.42.4:
     resolution: {integrity: sha512-DqC0AmDdBrrbIA+Kzl3yhBb6qCn4vZOAfxye2pTnIpinLegyagC5sLI8Pe9GPlXu9VpHBXIwpDDedpMfu++epA==}
     engines: {node: '>= 8'}
+    dev: true
+
+  /svelte2tsx/0.4.5_svelte@3.42.4+typescript@4.4.2:
+    resolution: {integrity: sha512-5SbnH3rGA5eymeSidlPZ3qxL0P6SfJv0pWaoTVuJDxpHbI00dUZpuDTNn/WZ8yMXfU7vjY/QxKC/iYiDTbJEjg==}
+    peerDependencies:
+      svelte: ^3.24
+      typescript: ^4.1.2
+    dependencies:
+      dedent-js: 1.0.1
+      pascal-case: 3.1.2
+      svelte: 3.42.4
+      typescript: 4.4.2
     dev: true
 
   /to-regex-range/5.0.1:
